@@ -1,4 +1,4 @@
-name: Build snapshot Alfred Workflow
+name: Test SNILS generator
 
 on: [push]
 
@@ -6,6 +6,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
       - uses: actions/checkout@v2
     
       - name: Build Alfred Workflow
@@ -20,4 +21,13 @@ jobs:
         with:
           name: SNILS-generator-workflow
           path: ${{ steps.alfred_builder.outputs.workflow_file }}
+  
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+      - uses: actions/checkout@v2
+    
+      - name: Test script
+        run: node tests/run.js
 
