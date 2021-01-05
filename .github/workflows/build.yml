@@ -18,6 +18,6 @@ jobs:
       - name: Upload results
         uses: actions/upload-artifact@v2
         with:
-          name: result
+          name: SNILS-generator-workflow
           path: ${{ steps.alfred_builder.outputs.workflow_file }}
 
