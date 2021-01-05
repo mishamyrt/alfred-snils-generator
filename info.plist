@@ -76,7 +76,7 @@
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>./generate-snils.py</string>
+				<string>./generate_snils.py</string>
 				<key>type</key>
 				<integer>8</integer>
 			</dict>
