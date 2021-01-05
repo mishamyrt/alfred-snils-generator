@@ -1,27 +1,29 @@
 #!/usr/bin/env python3
+'''
+This scripts generates random SNILS number. SNILS is the russian Pension insurance number.
+'''
 from random import randrange
 
-def get_random_number():
-    return randrange(10 ** 9)
-
-def get_sum(x: int) -> int:
-    string = str(x)
+def get_checksum(snils_number: int) -> int:
+    '''
+    Generates a checksum of the SNILS number
+    '''
     result = 0
     index = 0
-    for v in string:
-        result += int(v) * (9 - index)
+    for digit in str(snils_number):
+        result += int(digit) * (9 - index)
         index += 1
-    return result
+
+    if result > 101:
+        result %= 101
+    return 0 if result == 100 or result == 101 else result
 
 def generate_snils():
-    snils_code = get_random_number()
-    summ = get_sum(snils_code)
-
-    if summ > 101:
-        summ %= 101
-
-    check_sum = '00' if summ == 100 or summ == 101 else f'{summ:02}'
-    return f'{snils_code:09}{check_sum}'
-
+    '''
+    Generates SNILS number
+    '''
+    snils_code = randrange(10 ** 9)
+    checksum = get_checksum(snils_code)
+    return f'{snils_code:09}{checksum:02}'
 
 print(generate_snils())
