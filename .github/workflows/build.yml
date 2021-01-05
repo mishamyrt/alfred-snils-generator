@@ -1,4 +1,4 @@
-name: Create Alfred Workflow
+name: Build snapshot Alfred Workflow
 
 on: [push]
 
