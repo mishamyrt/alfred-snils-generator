@@ -1,5 +1,7 @@
 # Alfred SNILS generator
 
+![Tests](https://github.com/mishamyrt/alfred-snils-generator/workflows/Tests/badge.svg)
+
 ## Installation
 
 Download the latest version from the [releases page](https://github.com/mishamyrt/alfred-snils-generator/releases) and double-click on the downloaded file. 
