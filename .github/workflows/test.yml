@@ -1,4 +1,4 @@
-name: Test SNILS generator
+name: Tests
 
 on: [push]
 
