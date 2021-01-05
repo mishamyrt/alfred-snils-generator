@@ -10,7 +10,7 @@ def get_checksum(snils_number: int) -> int:
     '''
     result = 0
     index = 0
-    for digit in str(snils_number):
+    for digit in f'{snils_number:09}':
         result += int(digit) * (9 - index)
         index += 1
 
