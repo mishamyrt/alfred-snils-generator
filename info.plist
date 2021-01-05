@@ -38,7 +38,7 @@
 	<key>createdby</key>
 	<string>mishamyrt</string>
 	<key>description</key>
-	<string>Generate random snils number</string>
+	<string>Generate random SNILS number</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
@@ -110,7 +110,7 @@
 		</dict>
 	</array>
 	<key>readme</key>
-	<string></string>
+	<string>Call up the Alfred panel and start typing `snils`. Once you have pressed Enter, the generated SNILS will be copied to the clipboard.</string>
 	<key>uidata</key>
 	<dict>
 		<key>16039760-F173-4AB8-9C73-DA7401D5DE23</key>
